@@ -7,17 +7,18 @@ import com.example.nooroweather.domain.models.Weather
 @Entity
 data class WeatherEntity(
     @PrimaryKey(autoGenerate = false)
-    val id:Int = 1,
+    val id: Int = 1,
     val name: String,
     val temp: Double,
     val condition: String,
+    val conditionText: String,
     val humidity: Int,
-    val uvIndex: Int,
+    val uvIndex: Double,
     val feelsLike: Double
 ) {
     fun toWeather(): Weather {
         return Weather(
-            name, temp, condition, humidity, uvIndex, feelsLike
+            name, temp, condition, conditionText, humidity, uvIndex, feelsLike
         )
     }
 }
