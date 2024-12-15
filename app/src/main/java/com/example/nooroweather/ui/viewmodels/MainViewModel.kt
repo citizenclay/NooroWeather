@@ -65,7 +65,6 @@ class MainViewModel @Inject constructor(
                     }
 
                     is Resource.Error -> {
-                        // toast text
                         _toastText.value = it.error.error.message
                     }
 

@@ -36,7 +36,7 @@ object AppModule {
     fun providesWeatherApiKey(): String {
         val dotenv = dotenv {
             directory = "/assets"
-            filename = "env" // instead of '.env', use 'env'
+            filename = "env"
         }
         return dotenv["WEATHER_API_KEY"]
     }
